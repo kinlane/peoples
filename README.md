@@ -1,2 +1,2 @@
 # People
-These are the people that matter.
+These are the people that matter now.
