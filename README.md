@@ -1,2 +1,2 @@
-# peoples
-This is for managing my peoples.
+# People
+These are the people that matter.
