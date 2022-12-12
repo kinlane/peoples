@@ -117,11 +117,11 @@ jobs:
             aws_region: us-east-1
             function_name: m-s-peoples-people-tags-tag-d
             zip_file: m-s-peoples-people-tags-tag-d.zip
-      - name: /peopless/bookmarklet get lambda deploy zip
-        uses: kinlane/peopless@main
+      - name: /peoples/bookmarklet get lambda deploy zip
+        uses: kinlane/peoples@main
         with:
-            args: zip -qq -r m-s-peoplesbookmarklet-g.zip peopless/bookmarklet/get/index.js node_modules
-      - name: peopless get lambda deploy
+            args: zip -qq -r m-s-peoplesbookmarklet-g.zip peoples/bookmarklet/get/index.js node_modules
+      - name: peoples get lambda deploy
         uses: appleboy/lambda-action@master
         with:
             aws_access_key_id: ${{secrets.AWS_ACCESS_KEY_ID}}
