@@ -116,4 +116,16 @@ jobs:
             aws_secret_access_key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
             aws_region: us-east-1
             function_name: m-s-peoples-people-tags-tag-d
-            zip_file: m-s-peoples-people-tags-tag-d.zip            
+            zip_file: m-s-peoples-people-tags-tag-d.zip
+      - name: /peopless/bookmarklet get lambda deploy zip
+        uses: kinlane/peopless@main
+        with:
+            args: zip -qq -r m-s-peoplessbookmarklet-g.zip peopless/bookmarklet/get/index.js node_modules
+      - name: peopless get lambda deploy
+        uses: appleboy/lambda-action@master
+        with:
+            aws_access_key_id: ${{secrets.AWS_ACCESS_KEY_ID}}
+            aws_secret_access_key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+            aws_region: us-east-1
+            function_name: m-s-peoplessbookmarklet-g
+            zip_file: m-s-peoplessbookmarklet-g.zip 
