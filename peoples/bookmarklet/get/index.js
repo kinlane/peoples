@@ -37,7 +37,7 @@ exports.handler = vandium.generic()
             var tsql = "SELECT * FROM tags WHERE name = '" + event.tag + "'";
             connection.query(tsql, function (error, tresults, fields) {  
                 
-                var tag_id = tresults[0].id;
+                var tag_id = tresults.id;
                 
                 // Insert Tag
                 var ptsql = "INSERT INTO peoples_tags(people_id,tag_id) VALUES(" + results.insertId + "," + tag_id + ")";
